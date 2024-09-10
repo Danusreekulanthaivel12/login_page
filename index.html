@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+   <link rel="stylesheet" href="index.css">
+   <title>Login page</title>
+</head>
+<body> 
+                                                    
+   <div class="rectangle"><div id="second"></div>
+    <img src="bannari amman logo.jpg" alt="bannari amman" id="image">  
+    <h1>Login to Browse</h1>
+   <form method="GET" onsubmit="return false">
+   <div>
+      <input type="text" name="pass" id="pass" placeholder="ID(Ex:201cs283)" required onkeyup="first()" >
+      </div><br><br>
+      <div>
+      <input type="password" name="number" id="number" placeholder="S/Fddmmyy" required onkeyup="second()">
+   </div><br><br>
+   <div>
+      <input type="submit" name="sign" id="sign" placeholder="Sign In" onclick="events()">
+   </div>
+   <br><br></form>
+   <a href="#" onclick="password()" id="change">Change Password</a>
+   <br><br><br><br>
+   <div id="check"></div>
+   <p id="name"> User Name[Ex:201cs283] Password:[S/Fddmmy]</p>
+   <p id="more">For More information Click Here</p></div>
+   <script>
+      var storedvalue1=' ';
+      var storedvalue2=' ';
+      function first()
+      {
+      let answer1=document.getElementById('pass');
+      storedvalue1=answer1.value;
+      }
+      function second()
+      {
+         let answer3=document.getElementById('number');
+         storedvalue2=answer3.value;
+      }
+      function events()
+      {
+         if(storedvalue1==='2023UCB1023' && storedvalue2==='S180905')
+        {
+         window.location.href = "login.html";
+        }
+        else{
+          document.getElementById('check').innerHTML='invalid username and password'
+        }
+      }
+   </script>
+</body>
